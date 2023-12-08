@@ -1,0 +1,35 @@
+<div class="container">
+    <h3>Product List</h3>
+
+    <mat-form-field>
+        <input
+        matInput 
+        #inputField 
+        type="text" 
+        placeholder="Search" 
+        (keyup)="applyFilter($event)">
+    </mat-form-field>
+    <mat-form-field class="category-select">
+        <mat-select
+        #categorySelect
+        placeholder="Select Category" 
+        [(ngModel)]="selectedCategory"
+        (selectionChange)="sortProducts($event.value)"
+        >
+            <mat-option *ngFor="let category of categories" [value]="category">
+                {{ category }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button mat-raised-button 
+    class="clear-btn" 
+    (click)="clearInputField()"
+    >Clear</button>
+
+    <div fxLayout="row wrap" fxLayoutGap="50px grid">
+        <app-product-item 
+        [product]="product" *ngFor="let product of filteredProducts"
+        (addToCart)="addToCart($event)"
+        ></app-product-item>
+    </div>
+</div>

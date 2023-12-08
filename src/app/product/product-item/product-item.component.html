@@ -1,0 +1,10 @@
+
+<mat-card class="card" (click)="addToCartItem()">
+    <img mat-card-image src="assets/img/{{ product.image_url }}" alt="Card image cap">
+    <mat-card-content class="card-body">
+        <mat-card-title class="card-title">{{ product.name }}</mat-card-title>
+        <mat-card-subtitle class="card-text">{{ product.price | currency }}</mat-card-subtitle>
+        <button mat-raised-button class="btn-add">Add to Cart</button>
+    </mat-card-content>
+</mat-card> 
+

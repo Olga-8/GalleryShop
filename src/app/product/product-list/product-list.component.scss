@@ -1,0 +1,29 @@
+
+h3 {
+    color: rgb(62, 50, 10);
+    text-align: left;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold; 
+    padding-bottom: 20px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 0 auto;
+}
+
+.clear-btn {
+    margin-left: 10px;
+    align-items: center;
+    height: 50px;
+}
+
+.category-select {
+    margin-left: 10px;
+}
+
